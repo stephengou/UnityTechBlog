@@ -304,7 +304,6 @@ MonoBehaviour:
       SpellPower: 100
       HealingRange: 2
       HealPower: 100
-  SpellPower: 50
   Health: 100
 --- !u!4 &1742803804
 Transform:

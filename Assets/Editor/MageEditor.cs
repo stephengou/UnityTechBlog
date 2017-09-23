@@ -15,18 +15,14 @@ public class MageEditor : Editor {
     {
         serializedMage.Update();
         DrawPropertiesExcluding(serializedMage, new string[] { ABILITY_FACTORY_NAME });
-
-        EditorGUILayout.Separator();
-
-        DrawAbilitiesGUI();
-
+        DrawPrimarySpell();
         serializedMage.ApplyModifiedProperties();
     }
 
-    protected void DrawAbilitiesGUI()
+    protected void DrawPrimarySpell()
     {
         //display ability Type
-        EditorGUILayout.LabelField(ABILITY_FACTORY_NAME);
+        EditorGUILayout.LabelField(ABILITY_FACTORY_NAME, EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(SerializedAbility.FindPropertyRelative("Type"));
 
         //display relevant ability properties based on ability type
